@@ -1,0 +1,111 @@
+body{
+	background: #eeecec;
+	font-family: Calibri;
+}
+* {
+    padding: 0;
+}
+p {
+    color: #000;
+    text-align: left;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.showDesktop { display: inline-block; }
+.showPhone { display: none; }
+.show { display: block; }
+.hide { display: none; }
+.clear { clear: both; }
+.overflowhidden { overflow: hidden }
+.floatleft { float: left; }
+.floatright { float: right; }
+.textaligncenter { text-align: center; }
+.asterix { color: #cc1f41; }
+.ffcalibri { font-family: Calibri; }
+.white { color: #fff; }
+
+.mt10 { margin-top: 10px !important; }
+.mt15 { margin-top: 15px !important; }
+.mt20 { margin-top: 20px !important; }
+
+
+.mt3pc { margin-top: 3% !important; }
+
+.ml50 { margin-left: 50px !important; }
+.ml70 { margin-left: 70px !important; }
+
+.h30 { height: 30px !important; }
+
+.h35pc { height: 35% !important; }
+.h40pc { height: 40% !important; }
+.h43pc { height: 43% !important; }
+.h50pc { height: 50% !important; }
+.h52pc { height: 52% !important; }
+.h54pc { height: 54% !important; }
+.h59pc { height: 59% !important; }
+.h100pc { height: 100% !important; }
+
+
+.wauto { width: auto !important; }
+.w10pc { width: 10% !important; }
+.w20pc { width: 20% !important; }
+.w25pc { width: 25% !important; }
+.w30pc { width: 30% !important; }
+.w35pc { width: 35% !important; }
+.w39pc { width: 39% !important; }
+.w40pc { width: 40% !important; }
+.w50pc { width: 50% !important; }
+.w60pc { width: 60% !important; }
+.w65pc { width: 65% !important; }
+.w90pc { width: 90% !important; }
+.w100pc { width: 100% !important; }
+
+#wrapper {
+    max-width: 1025px;
+    margin: auto;
+}
+#wrapper .logo {
+	width: 100%;
+	max-width: 120px;
+}
+#wrapper .title {
+	float: left;
+    font-size: 35px;
+    margin: 30px 0 0 0px;
+    font-family: audiowide;
+}
+#header {
+    position: relative;
+    height: 50px;
+    max-width: 1025px;
+    margin: 20px auto;
+    background: #272c7c;
+    box-shadow: 0px 0px 20px 0px #272c7c;
+}
+#header .menu1:hover,
+#header .menu2:hover,
+#header .menu3:hover,
+#header .menu4:hover {
+    background: #636592;
+}
+#header p {
+    color: #fff;
+}
+#headerNotConnect {
+    position: relative;
+    height: 50px;
+    max-width: 1025px;
+    margin: 20px auto;
+    background: #272c7c;
+    box-shadow: 0px 0px 20px 0px #272c7c;
+}
+#footer {
+    width: 100%;
+    z-index: 10;
+    bottom: 0;
+    text-align: center;
+    padding: 20px 0 10px 0;
+}

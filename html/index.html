@@ -1,0 +1,120 @@
+<html>
+	<head>
+		<title>Application</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css"  href="theme/css/common.css">
+		<link rel="stylesheet" type="text/css"  href="theme/css/index.css">
+		<link rel="stylesheet" type="text/css"  href="theme/css/index_responsive.css">
+		<link rel="stylesheet" type="text/css"  href="theme/css/font-awesome.css">
+	</head>
+
+	<body>
+		<div id="wrapper" class="clear overflowhidden">
+			<img class="logo floatleft" src="theme/images/logo2.png" />
+			<p class="title">Modification d'Images</p>
+		</div>
+		<div id="header">
+			<div class="menu1 floatleft w25pc h100pc">
+				<p class="textaligncenter"><a href="index.html"><i class="fa fa-pencil-square" aria-hidden="true"><span class="showDesktop ffcalibri">&nbsp;&nbsp;&nbsp;En cours</span></i></a></p>
+			</div>
+			<div class="menu2 floatleft w25pc h100pc">
+				<p class="textaligncenter"><a href="mes_images.html"><i class="fa fa-folder-open" aria-hidden="true"><span class="showDesktop ffcalibri">&nbsp;&nbsp;&nbsp;Mes images</span></i></a></p>
+			</div>
+			<div class="menu3 floatleft w25pc h100pc">
+				<p class="textaligncenter"><a href="mes_infos.html"><i class="fa fa-info-circle" aria-hidden="true"><span class="showDesktop ffcalibri">&nbsp;&nbsp;&nbsp;Mes infos</span></i></a></p>
+			</div>
+			<div class="menu4 floatleft w25pc h100pc">
+				<p class="textaligncenter"><a href="connexion.html"><i class="fa fa-external-link-square" aria-hidden="true"><span class="showDesktop ffcalibri">&nbsp;&nbsp;&nbsp;Me déconnecter</span></i></a></p>
+			</div>
+		</div>
+		<div id="main" class="clear">
+			<form action="https://lambda-api.herokuapp.com/api/Images/upload" method="post" enctype="multipart/form-data" id="changeForm">
+				<div class="pictureBox">
+					<div class="picture textaligncenter">
+						<img id="imageEnCours" src="theme/images/fleurs.jpg" />
+					</div>
+				</div>
+				<div class="changesBox mt15 clear overflowhidden">
+					<div class="changes textaligncenter floatleft maxw100pc">
+						<div class="changePoint dimensions clear overflowhidden">
+							<p class="floatleft">Redimensions :</p>
+							<div class="sectionWidth ml70 floatleft">
+								<label>Width</label><br />
+								<input class="inputWidth textaligncenter" type="text" name="width">
+								<label>px</label>
+							</div>
+							<div class="sectionHeight floatleft">
+								<label>Height</label><br />
+								<input class="inputHeight textaligncenter" type="text" name="height	">
+								<label>px</label>
+							</div>
+							<button class="btn">Modifier</button>
+						</div>
+						<div class="changePoint filters mt10 clear overflowhidden">
+							<p class="floatleft">Conversion :</p>
+							<button class="btn">Appliquer</button>
+						</div>
+						<div class="changePoint flou mt10 clear overflowhidden">
+							<p class="floatleft">Flou :</p>
+							<button class="btn">Appliquer</button>
+						</div>
+						<div class="changePoint rograge mt10 clear overflowhidden">
+							<p class="floatleft">Rognage :</p>
+							<button class="btn">Appliquer</button>
+						</div>
+						<div class="changePoint rotation mt10 clear overflowhidden">
+							<p class="floatleft">Rotation :</p>
+							<button class="btn">Modifier</button>
+						</div>
+						<div class="changePoint sepia mt10 clear overflowhidden">
+							<p class="floatleft">Filtre Sepia</p>
+							<button class="btn">Appliquer</button>
+						</div>
+					</div>
+					<div class="rightBloc textaligncenter floatleft">
+							<!-- <div class="sectionNew floatleft mt20 w320 w100pc">
+								<p class="ffcalibri newImage w100pc textaligncenter mt15">Nouvelle Image</p><input class="btnNew w100pc" type="file" id="addFile"></input>
+								<button class="btn btnNew w100pc" onclick="">Nouvelle image</button>
+							</div> -->
+							<div class="sectionSave floatleft mt20 w320 w100pc">
+								<button class="btn btnSave w100pc">Sauvegarder</button>
+							</div>
+							<div class="sectionPrint floatleft mt20 w320 w100pc">
+								<button class="btn btnPrint w100pc">Imprimer</button>
+							</div>
+							<div class="sectionDelete floatleft mt20 w320 w100pc">
+								<button class="btn btnDelete w100pc">Supprimer</button>
+							</div>
+						</div>
+				</div>
+			</form>
+		</div>
+		<div id="footer">
+			© CloudCamp 2016
+		</div>
+		<script type="text/javascript">
+			function newImage() {
+			    $('#changeForm').submit(function( event ) {
+			        // On empêche le navigateur de soumettre le formulaire
+			        event.preventDefault();
+			 
+			        var $form = $(this);
+			        var formdata = (window.FormData) ? new FormData($form[0]) : null;
+			        var data = (formdata !== null) ? formdata : $form.serialize();
+			 
+			        $.ajax({
+			            url: $form.attr('action'),
+			            type: $form.attr('method'),
+			            contentType: false, // obligatoire pour de l'upload
+			            processData: false, // obligatoire pour de l'upload
+			            dataType: 'json', // selon le retour attendu
+			            data: data,
+			            success: function (response) {
+			                // La réponse du serveur
+			            }
+			        });
+			    });
+			}
+		</script>
+	</body>
+</html>

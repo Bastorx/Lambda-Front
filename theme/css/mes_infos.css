@@ -1,0 +1,24 @@
+#header .menu3 {
+    background: #636592;
+}
+#footer {
+    position: absolute;
+}
+
+#main {
+	margin: auto;
+	max-width: 1025px;
+}
+#main .infos {
+    box-shadow: 10px 10px 70px #D8D1D1;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+    font-size: 14px;
+}
+#main .infos .logInfos {
+    padding: 10% 0 0 10%;
+}
+#main .sideBlocRight {
+	background: #cc1f41;
+    margin-left: -40px;
+}

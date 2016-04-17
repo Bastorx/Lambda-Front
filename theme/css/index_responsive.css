@@ -1,0 +1,35 @@
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)  {
+	#main .changesBox .rightBloc {
+		margin: 20px 10px auto;]
+	}
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+	#main .changesBox .rightBloc {
+		margin: 10px 0 20px 0;
+		max-width: 100%; 
+	}
+	.maxw100pc { max-width: 100% !important; }
+	.w320 { width: 320px !important; }
+}
+/***********/
+
+@media screen and (max-width : 1015px) {
+	#main .changesBox .rightBloc {
+		margin: 10px 0 20px 0;
+		max-width: 100%; 
+	}
+	.maxw100pc { max-width: 100% !important; }
+	.w100pc { width: 100% !important; }
+}
+
+@media screen and (max-width : 720px) {
+	#main .changesBox .changes .changePoint .btn {
+		width: 100%;
+		float: none;
+		border-radius: 0;
+    	margin-bottom: -10px;
+	}
+	.showDesktop { display: none; }
+	.showPhone { display: block; }
+}

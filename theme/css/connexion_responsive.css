@@ -1,0 +1,34 @@
+@media screen and (max-width : 640px) {
+	.showDesktop { display: none; }
+	.showPhone { display: block; }
+	.w100pc { width: 100% !important; }
+	#main .sideBlocRight {
+		margin-left: 0;
+	}
+	#main .connexionBox .connexion {
+		width: 100% !important;
+	}
+	#main .sideBlocBottomConnexion {
+		border-radius: 0;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+		height: 40px;
+		background: #cc1f41;
+		margin: 24px 0 0 0;
+	}
+	#main .inscriptionBox .inscription {
+		width: 100% !important;
+	}
+	#main .sideBlocBottomInscription {
+		border-radius: 0;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+		height: 40px;
+		background: #3dacd6;
+		margin: 24px 0 0 0;
+	}
+	#main .inscriptionBox {
+		margin-left: 0;
+	}
+
+}

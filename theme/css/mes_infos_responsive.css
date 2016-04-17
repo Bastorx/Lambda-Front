@@ -1,0 +1,19 @@
+@media screen and (max-width : 640px) {
+	.showDesktop { display: none; }
+	.showPhone { display: block; }
+	#main .sideBlocRight {
+		margin-left: 0;
+	}
+	#main .sideBlocBottom {
+		border-radius: 0;
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius: 20px;
+		height: 40px;
+		background: #cc1f41;
+		margin: 24px 0 0 0;
+	}
+	#main .infos {
+		height: auto !important;
+	}
+
+}

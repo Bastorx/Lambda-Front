@@ -1,0 +1,53 @@
+#header .menu4 {
+    background: #636592;
+}
+#main {
+	margin: auto;
+	max-width: 1025px;
+}
+#main .connexionBox,
+#main .inscriptionBox {
+    box-shadow: 10px 10px 70px #D8D1D1;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+}
+#main .connexionBox input,
+#main .inscriptionBox input {
+    font-size: 14px;
+}
+#main .sideBlocLeft {
+	background: #3dacd6;
+    opacity: 0.5;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+#main .sideBlocRight {
+	background: #cc1f41;
+    margin-left: -40px;
+}
+.btn {
+    position: relative;
+    margin: 30px auto;
+    border-radius: 40px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 15px 40px 15px 40px;
+    text-decoration: none;
+    border: none;
+    width: 265px;
+}
+#main .connexionBox .btnConnect:hover {
+    background: #cc1f41;
+    text-decoration: none;
+}
+#main .connexionBox .btnConnect {
+    background: #ea7088;
+}
+#main .inscriptionBox .btnInscrip:hover {
+    background: #3dacd6;
+    text-decoration: none;
+}
+#main .inscriptionBox .btnInscrip {
+    background: #8ecae1;
+}

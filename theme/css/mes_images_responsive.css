@@ -1,0 +1,18 @@
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape)  {
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+	.maxw100pc { max-width: 100% !important; }
+	.w320 { width: 320px !important; }
+}
+/***********/
+
+@media screen and (max-width : 1015px) {
+	.maxw100pc { max-width: 100% !important; }
+}
+
+@media screen and (max-width : 720px) {
+	.showDesktop { display: none; }
+	.showPhone { display: block; }
+	.picture { width: 100% !important; }
+}

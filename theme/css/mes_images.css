@@ -1,0 +1,63 @@
+#header .menu2 {
+    background: #636592;
+}
+#main {
+	margin: auto;
+	max-width: 1025px;
+}
+#main p {
+	color: #5a5a5a;
+}
+#main .pictureBox {
+    box-shadow: 10px 10px 70px #D8D1D1;
+    border: 1px solid #cccccc;
+    border-radius: 20px;
+}
+#main .pictureBox .gallery {
+	width: 100%;
+	padding: 20px 0 20px 0px;
+	
+}
+#main .pictureBox .imgGallery {
+	width: 80%;
+	border-radius: 200px;
+}
+
+
+#main .sectionNew {
+	border-radius: 40px;
+    width: 100%;
+    background: #97dfda;
+    overflow: hidden;
+    position: relative;
+}
+#main .sectionNew:hover {
+	background: #58bab3;
+}
+#main .sectionNew .newImage {
+	color: #fff;
+	font-size: 20px;
+	position: absolute;
+}
+#main .sectionNew input {
+    display: block !important;
+    width: 100% !important;
+    height: 57px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+}
+#main .btnImport {
+	border-radius: 40px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 15px 40px 15px 40px;
+    text-decoration: none;
+    border: none;
+    width: 265px;
+}
+
+
+
+
+   
