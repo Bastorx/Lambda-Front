@@ -27,37 +27,56 @@
 				<div class="changesBox mt15 clear overflowhidden">
 					<div class="changes textaligncenter floatleft maxw100pc">
 						<div class="changePoint dimensions clear overflowhidden">
-							<p class="floatleft">Redimensions :</p>
+							<p class="floatleft w130px">Redimensions :</p>
 							<div class="sectionWidth ml70 floatleft">
-								<label>Width</label><br />
+								<label>Width (px)</label><br />
 								<input class="inputWidth textaligncenter" type="text" name="width">
-								<label>px</label>
 							</div>
 							<div class="sectionHeight floatleft">
-								<label>Height</label><br />
+								<label>Height (px)</label><br />
 								<input class="inputHeight textaligncenter" type="text" name="height	">
-								<label>px</label>
 							</div>
 							<button class="btn">Modifier</button>
 						</div>
-						<div class="changePoint filters mt10 clear overflowhidden">
-							<p class="floatleft">Conversion :</p>
-							<button class="btn">Appliquer</button>
-						</div>
 						<div class="changePoint flou mt10 clear overflowhidden">
-							<p class="floatleft">Flou :</p>
+							<p class="floatleft w130px">Flou :</p>
+							<div class="sectionWidth ml70 floatleft">
+								<label>Sigma</label><br />
+								<input class="inputSigma textaligncenter" type="text" name="sigma">
+							</div>
+							<div class="sectionWidth ml70 floatleft">
+								<label>Radius</label><br />
+								<input class="inputRadius textaligncenter" type="text" name="radius">
+							</div>
 							<button class="btn">Appliquer</button>
 						</div>
-						<div class="changePoint rograge mt10 clear overflowhidden">
-							<p class="floatleft">Rognage :</p>
+						<div class="changePoint rognage mt10 clear overflowhidden">
+							<p class="floatleft w130px h70px">Rognage :</p>
+							<div class="sectionWidth ml70 floatleft">
+								<label>Width (px)</label><br />
+								<input class="inputWidth textaligncenter" type="text" name="width">
+							</div>
+							<div class="sectionHeight floatleft ml70">
+								<label>Height (px)</label><br />
+								<input class="inputHeight textaligncenter" type="text" name="height	">
+							</div>
+							<br /><br /><br />
+							<div class="sectionWidth ml70 floatleft">
+								<label>X</label><br />
+								<input class="inputWidth textaligncenter" type="text" name="x">
+							</div>
+							<div class="sectionHeight floatleft ml70">
+								<label>Y</label><br />
+								<input class="inputHeight textaligncenter" type="text" name="y	">
+							</div>
 							<button class="btn">Appliquer</button>
 						</div>
 						<div class="changePoint rotation mt10 clear overflowhidden">
-							<p class="floatleft">Rotation :</p>
+							<p class="floatleft w130px">Rotation :</p>
 							<button class="btn">Modifier</button>
 						</div>
 						<div class="changePoint sepia mt10 clear overflowhidden">
-							<p class="floatleft">Filtre Sepia</p>
+							<p class="floatleft w130px">Filtre Sepia</p>
 							<button class="btn">Appliquer</button>
 						</div>
 					</div>

@@ -38,6 +38,7 @@ a {
 .ml70 { margin-left: 70px !important; }
 
 .h30 { height: 30px !important; }
+.h70px { height: 70px !important; }
 
 .h35pc { height: 35% !important; }
 .h40pc { height: 40% !important; }
@@ -48,6 +49,7 @@ a {
 .h59pc { height: 59% !important; }
 .h100pc { height: 100% !important; }
 
+.w130px { width: 130px !important; }
 
 .wauto { width: auto !important; }
 .w10pc { width: 10% !important; }
