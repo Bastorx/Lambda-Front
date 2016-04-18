@@ -16,7 +16,7 @@
 		</div>
 		<?php include'include/header.php'; ?>
 		<div id="main" class="clear">
-			<form action="https://lambda-api.herokuapp.com/api/Images/upload" method="post" enctype="multipart/form-data" id="changeForm">
+			<form id="changeForm">
 				<div class="pictureBox">
 					<div class="picture textaligncenter">
 						
@@ -34,9 +34,13 @@
 							</div>
 							<div class="sectionHeight floatleft">
 								<label>Height (px)</label><br />
-								<input class="inputHeight textaligncenter" type="text" name="height	">
+								<input class="inputHeight textaligncenter" type="text" name="height">
 							</div>
-							<button class="btn">Modifier</button>
+							<div class="sectionHeight floatleft">
+								<label>Sans proportions</label><br />
+								<input class="inputHeight textaligncenter" type="checkbox" name="options" value="!">
+							</div>
+							<button class="btn" type="button" id="dimensions">Modifier</button>
 						</div>
 						<div class="changePoint flou mt10 clear overflowhidden">
 							<p class="floatleft w130px">Flou :</p>
@@ -48,39 +52,42 @@
 								<label>Radius</label><br />
 								<input class="inputRadius textaligncenter" type="text" name="radius">
 							</div>
-							<button class="btn">Appliquer</button>
+							<button class="btn" type="button" id="blur">Appliquer</button>
 						</div>
 						<div class="changePoint rognage mt10 clear overflowhidden">
-							<p class="floatleft w130px h70px">Rognage :</p>
+							<p class="floatleft w130px">Rognage :</p>
 							<div class="sectionWidth ml70 floatleft">
 								<label>Width (px)</label><br />
 								<input class="inputWidth textaligncenter" type="text" name="width">
 							</div>
 							<div class="sectionHeight floatleft ml70">
 								<label>Height (px)</label><br />
-								<input class="inputHeight textaligncenter" type="text" name="height	">
+								<input class="inputHeight textaligncenter" type="text" name="height">
 							</div>
-							<br /><br /><br />
 							<div class="sectionWidth ml70 floatleft">
 								<label>X</label><br />
 								<input class="inputWidth textaligncenter" type="text" name="x">
 							</div>
 							<div class="sectionHeight floatleft ml70">
 								<label>Y</label><br />
-								<input class="inputHeight textaligncenter" type="text" name="y	">
+								<input class="inputHeight textaligncenter" type="text" name="y">
 							</div>
-							<button class="btn">Appliquer</button>
+							<button class="btn" type="button" id="rognage">Appliquer</button>
 						</div>
 						<div class="changePoint rotation mt10 clear overflowhidden">
 							<p class="floatleft w130px">Rotation :</p>
-							<button class="btn">Modifier</button>
+							<div class="sectionHeight floatleft ml70">
+								<label>Angle</label><br />
+								<input class="inputHeight textaligncenter" type="text" name="angle">
+							</div>
+							<button class="btn" type="button" id="rotate">Modifier</button>
 						</div>
 						<div class="changePoint sepia mt10 clear overflowhidden">
 							<p class="floatleft w130px">Filtre Sepia</p>
-							<button class="btn">Appliquer</button>
+							<button class="btn" type="button" id="sepia">Appliquer</button>
 						</div>
 					</div>
-					<div class="rightBloc textaligncenter floatleft">
+					<!-- <div class="rightBloc textaligncenter floatleft">
 							<div class="sectionSave floatleft mt20 w320 w100pc">
 								<button class="btn btnSave w100pc">Sauvegarder</button>
 							</div>
@@ -90,7 +97,7 @@
 							<div class="sectionDelete floatleft mt20 w320 w100pc">
 								<button class="btn btnDelete w100pc">Supprimer</button>
 							</div>
-						</div>
+						</div> -->
 				</div>
 			</form>
 		</div>
@@ -147,6 +154,57 @@
 			    }
 			    return vars;
 			}
+
+				$("#blur").on("click", function(){
+					var a = $(".flou").find( "input[name='sigma']" ).val();
+					var b = $(".flou").find( "input[name='radius']" ).val();
+					console.log("test", getUrlVars());
+					var url = "https://lambda-api.herokuapp.com/api/Images/"+getUrlVars()["imageId"]+"/edit?op=blur&params="+a+"&params="+b;
+
+					$('#imageEnCours').attr('src', url);
+				});
+
+				$("#dimensions").on("click", function(){
+					var a = $(".dimensions").find( "input[name='width']" ).val();
+					var b = $(".dimensions").find( "input[name='height']" ).val();
+					var c = null;
+					if (c = $(".dimensions").find( "input[name='options']" ).is(':checked'))
+					{
+						c = "!";
+					}
+					console.log("resize", getUrlVars());
+					var url = "https://lambda-api.herokuapp.com/api/Images/"+getUrlVars()["imageId"]+"/edit?op=resize&params="+a+"&params="+b+"&params="+c;
+
+					$('#imageEnCours').attr('src', url);
+				});
+
+				$("#rognage").on("click", function(){
+					var a = $(".rognage").find( "input[name='width']" ).val();
+					var b = $(".rognage").find( "input[name='height']" ).val();
+					var c = $(".rognage").find( "input[name='x']" ).val();
+					var d = $(".rognage").find( "input[name='y']" ).val();
+					console.log("resize", getUrlVars());
+					var url = "https://lambda-api.herokuapp.com/api/Images/"+getUrlVars()["imageId"]+"/edit?op=crop&params="+a+"&params="+b+"&params="+c+"&params="+d;
+
+					$('#imageEnCours').attr('src', url);
+				});
+				
+				$("#rotate").on("click", function(){
+					var a = $(".rotation").find( "input[name='angle']" ).val();
+					console.log("resize", getUrlVars());
+					var url = "https://lambda-api.herokuapp.com/api/Images/"+getUrlVars()["imageId"]+"/edit?op=rotate&params="+a;
+
+					$('#imageEnCours').attr('src', url);
+				});
+
+				$("#sepia").on("click", function(){
+					var url = "https://lambda-api.herokuapp.com/api/Images/"+getUrlVars()["imageId"]+"/edit?op=sepia";
+
+					$('#imageEnCours').attr('src', url);
+				});
+			
+
+
 		</script>
 	</body>
 </html>

@@ -19,7 +19,7 @@
 	
 }
 #main .pictureBox .picture img {
-	width: 90%;
+	max-width: 90%;
 }
 #main .changesBox {
     box-shadow: 10px 10px 70px #D8D1D1;
@@ -29,7 +29,6 @@
 }
 #main .changesBox .changes {
 	width: 100%;
-	max-width: 710px;
 	padding: 20px 0 20px 0px;
 	
 }
@@ -64,8 +63,8 @@
 #main .changesBox .changes .dimensions .sectionWidth {
 	margin: 0 0 0 70px;
 }
-#main .changesBox .changes .dimensions .inputWidth,
-#main .changesBox .changes .dimensions .inputHeight,
+#main .changesBox .changes .inputWidth,
+#main .changesBox .changes .inputHeight,
 #main .changesBox .changes .flou .inputSigma,
 #main .changesBox .changes .flou .inputRadius,
 #main .changesBox .changes .rognage .inputWidth,
